@@ -4,9 +4,9 @@ require File.expand_path('../lib/social_login/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Daniel Gomez Sierra"]
   gem.email         = ["danielgomezsierra@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{This gem help you to login to different social networks (Academic project).}
+  gem.summary       = %q{This gem help you to login to different social networks (Academic project).}
+  gem.homepage      = "http://github.com/dagosi89/social_login"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
