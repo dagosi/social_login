@@ -1,6 +1,6 @@
 # SocialLogin
 
-TODO: Write a gem description
+This gem help you to login to different social networks (Academic project).
 
 ## Installation
 
