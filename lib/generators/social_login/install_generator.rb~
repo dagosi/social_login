@@ -19,7 +19,7 @@ module SocialLogin
       f.each do |line|
         tempfile << line
         if line.include?("Application.routes.draw")
-          tempfile << "match '/auth/:provider/callback' => # Create controller action."
+          tempfile << "  match '/auth/:provider/callback' => # Create controller action."
         end
       end
       f.close
