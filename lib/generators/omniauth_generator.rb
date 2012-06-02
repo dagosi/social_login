@@ -1,10 +1,10 @@
-require 'ftools'
+require 'fileutils'
 module SocialLogin
   module Generators
     class OmniauthGenerator < Rails::Generators::Base
       desc "Creates the omniauth file to configure the authentication."
       def initialize()
-        File.copy("templates/omniauth.rb", "config/initializers/omniauth.rb")
+        FileUtils.cp("templates/omniauth.rb", "config/initializers/omniauth.rb")
       end
     end
   end
