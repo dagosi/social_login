@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{This gem help you to login to different social networks (Academic project).}
   gem.homepage      = "http://github.com/dagosi89/social_login"
 
-  gem.add_development_dependency "omniauth"
+  gem.add_development_dependency "rspec"
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
