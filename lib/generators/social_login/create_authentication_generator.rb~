@@ -5,10 +5,10 @@ module SocialLogin
   class InstallGenerator < Rails::Generators::Base
     source_root File.expand_path("../../templates", __FILE__)
     
-    desc "Initial configuration."
+    desc "Creates the omniauth file to configure the authentication."
     
     def create_omniauth_file
-      template 'omniauth.rb', 'config/initializers/omniauth.rb'
+      template 'create_authentication.rb', 'public/create_authentication.rb'
     end
     
     def create_routes
@@ -41,8 +41,5 @@ module SocialLogin
       FileUtils.mv("Gemfile.tmp", "Gemfile")
     end
     
-    puts "Now you have to create the authentication model."
-    puts "This is an example:"
-    puts "rails g controller authentication user_id:integer provider:string uid:string"
   end
 end
