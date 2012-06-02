@@ -28,12 +28,14 @@ module SocialLogin
     def create_dependencies
       tempfile = File.open("Gemfile.tmp", 'w')
       f = File.new("Gemfile")
+      wrote = false
       f.each do |line|
         tempfile << line
-        if line.include?("gem 'rails'")
+        if line.include?("gem 'rails'") && not wrote
           tempfile << "gem 'omniauth-twitter'\n"
           tempfile << "gem 'omniauth-facebook'\n"
           tempfile << "gem 'omniauth-linkedin'\n"
+          wrote = true
         end
       end
       f.close
