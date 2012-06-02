@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'social_login'
+puts SocialLogin.hi(ARGV[0])
