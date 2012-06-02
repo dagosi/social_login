@@ -31,7 +31,7 @@ module SocialLogin
       wrote = false
       f.each do |line|
         tempfile << line
-        if line.include?("gem 'rails'") && not wrote
+        if not wrote && line.include?("gem 'rails'") 
           tempfile << "gem 'omniauth-twitter'\n"
           tempfile << "gem 'omniauth-facebook'\n"
           tempfile << "gem 'omniauth-linkedin'\n"
