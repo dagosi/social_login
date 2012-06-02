@@ -17,7 +17,8 @@ module SocialLogin
       f.each do |line|
         tempfile << line
         if line.include?("Application.routes.draw")
-          tempfile << "  match '/auth/:provider/callback' => authentications#create\n\n"
+          tempfile << "#This is a route example, to make it works, you must create an authnetications controller."
+          tempfile << "  #match '/auth/:provider/callback' => authentications#create\n\n"
         end
       end
       f.close
