@@ -1,6 +1,7 @@
 require "rails"
 require "social_login/version"
 require "social_login/translator"
+require ""
 
 module SocialLogin
 
