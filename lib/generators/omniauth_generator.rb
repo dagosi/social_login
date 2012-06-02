@@ -8,4 +8,4 @@ module SocialLogin
       end
     end
   end
-endxs
+end
