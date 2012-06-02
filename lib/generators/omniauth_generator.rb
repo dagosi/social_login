@@ -1,4 +1,4 @@
-require 'fileutils'
+#require 'fileutils'
 module SocialLogin
   module Generators
     class OmniauthGenerator < Rails::Generators::Base
