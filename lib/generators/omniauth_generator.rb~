@@ -1,0 +1,6 @@
+require 'ftools'
+class OmniauthGenerator
+  def initialize()
+    File.copy()
+  end
+end
