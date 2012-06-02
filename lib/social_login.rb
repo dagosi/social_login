@@ -1,7 +1,7 @@
 require "rails"
 require "social_login/version"
 require "social_login/translator"
-require "generators/omniauth_generator"
+require "social_login/generators/omniauth_generator"
 
 module SocialLogin
 
