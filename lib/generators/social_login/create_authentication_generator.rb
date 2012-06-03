@@ -1,4 +1,5 @@
 require "rails/generators"
+require "rails"
 
 module SocialLogin
   class CreateAuthenticationGenerator < Rails::Generators::Base
