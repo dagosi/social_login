@@ -1,5 +1,4 @@
 require "rails/generators"
-require "rails"
 
 module SocialLogin
   class CreateAuthenticationGenerator < Rails::Generators::Base
@@ -18,7 +17,13 @@ module SocialLogin
     end
     
     def create_authentication_partials
-      template 'authentications.html.erb', 'public/_auth.html.erb'
+      
+      auth = File.open("public/_auth.html.erb", "w")
+      auth << "<%= link_to(image_tag('twitter_64.png', :size => '64x64', :alt => 'Twitter'), '/auth/twitter') %>\n"
+      auth << "<%= link_to(image_tag('facebook_64.png', :size => '64x64', :alt => 'Facebook'), '/auth/facebook') %>\n"
+      auth << "<%= link_to(image_tag('linkedin_64.png', :size => '64x64', :alt => 'LinkedIn'), '/auth/linkedin') %>\n"
+      auth.close
     end
+
   end
 end
