@@ -17,7 +17,7 @@ module SocialLogin
     end
     
     def create_authentication_partials
-      tempalte 'authentications.html.erb', 'public/_auth.html.erb'
+      template 'authentications.html.erb', 'public/_auth.html.erb'
     end
   end
 end
