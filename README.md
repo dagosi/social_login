@@ -39,9 +39,9 @@ This generator will create the `omniauth.rb` file in the `config/initializers` d
     end
 
 There is a basic configuration when you have to put your social networks credentials. So, first you have to create a twitter application for instance (http://dev.twitter.com).
-Here you can add several providers, whatever you want, but you have to add their specific omniauth gem.
+Here you can add several providers, whatever you want, but you have to add their specific omniauth gem as well.
 
-After this generation, this generator will create the callback route that you need to handle when, the authentication against the social network, is successful. This will add the below route to your `config/routes.rb` file:
+After this generation, this generator will create the callback route that you need to handle when the authentication against the social network is successful. This will add the below route to your `config/routes.rb` file:
 
      #match '/auth/:provider/callback' => 'authentications#create'
 
