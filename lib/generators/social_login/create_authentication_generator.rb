@@ -9,5 +9,15 @@ module SocialLogin
     def create_omniauth_file
       template 'create_authentication.rb', 'public/create_authentication.rb'
     end
+
+    def copy_auth_images
+      template 'images/twitter_64.png', 'app/assets/images/twitter_64.png'
+      template 'images/facebook_64.png', 'app/assets/images/facebook_64.png'
+      template 'images/linkedin_64.png', 'app/assets/images/linkedin_64.png'
+    end
+    
+    def create_authentication_partials
+      tempalte 'authentications.html.rb', 'public/_auth.html.rb'
+    end
   end
 end

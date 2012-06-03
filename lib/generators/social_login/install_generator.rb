@@ -17,8 +17,8 @@ module SocialLogin
       f.each do |line|
         tempfile << line
         if line.include?("Application.routes.draw")
-          tempfile << "#This is a route example, to make it works, you must create an authnetications controller."
-          tempfile << "  #match '/auth/:provider/callback' => authentications#create\n\n"
+          tempfile << "#This is a route example, to make it works, you must create an authnetications controller.\n"
+          tempfile << "  #match '/auth/:provider/callback' => 'authentications#create'\n\n"
         end
       end
       f.close
@@ -48,6 +48,6 @@ module SocialLogin
     
     puts "Now you have to create the authentication model."
     puts "This is an example:"
-    puts "rails g controller authentication user_id:integer provider:string uid:string"
+    puts "rails g scaffold authentication user_id:integer provider:string uid:string"
   end
 end
