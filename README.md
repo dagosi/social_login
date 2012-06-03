@@ -55,7 +55,7 @@ This generator also add the default gem dependencies to your `Gemfile`, so then,
 
 Later:
 
-   $ bundle install
+    $ bundle install
 
 With this, you shall have your omniauth basic configuration done.
 
