@@ -45,7 +45,11 @@ After this generation, this generator will create the callback route that you ne
 
      #match '/auth/:provider/callback' => 'authentications#create'
 
-This is just a comment. Keep in mind that the `AuthenticationsController` is just an example here.  
+This is just a comment. Keep in mind that the `AuthenticationsController` is just an example here. To make this works at this point, you have to create your "authentications" controller and uncomment this line. This is an example (remember to use the same attributes in your controller):
+
+    rails g rails g scaffold authentication user_id:integer provider:string uid:string 
+
+After this, migrate your data base (`rake db:migrate`) and add the relationships to your user controller (if this is what you called your registration model) `has_many :authentications` and, in your "authentications" controller `belongs_to :user` 
 
 This generator also add the default gem dependencies to your `Gemfile`, so then, you have to run your bundle command.
 
@@ -58,6 +62,8 @@ Later:
     $ bundle install
 
 With this, you shall have your omniauth basic configuration done.
+
+
 
 ## Contributing
 
