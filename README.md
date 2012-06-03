@@ -47,6 +47,17 @@ After this generation, this generator will create the callback route that you ne
 
 This is just a comment. Keep in mind that the `AuthenticationsController` is just an example here.  
 
+This generator also add the default gem dependencies to your `Gemfile`, so then, you have to run your bundle command.
+
+    gem 'omniauth-twitter'
+    gem 'omniauth-facebook'
+    gem 'omniauth-linkedin'
+
+Later:
+
+   $ bundle install
+
+With this, you shall have your omniauth basic configuration done.
 
 ## Contributing
 
