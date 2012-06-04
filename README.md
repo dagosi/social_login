@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-After install the gem, you have to run the three generators that the gem provides.
+After install the gem, you have to run the two generators that the gem provides.
 
 First run the basic install generator:
 
@@ -63,7 +63,28 @@ Later:
 
 With this, you shall have your omniauth basic configuration done.
 
+# Authentication configuration
 
+This generator will create an example template `create_authnetication.rb` in your `public` directory that contains the basic code when an authentications it's going to be created.
+This code asume that your controller name is authentications. You have to move this chunck of code to the sample to your controller create authentication.
+
+Finally, this generator will generate too a partial and three social networs images taked from https://github.com/intridea/authbuttons.
+
+You will found into your `app/assests/images` directory the next three files:
+
+    twitter_64.png
+    facebook_64.png
+    linkedin_64.png
+
+If you want to add a new social network, you have to add the image too.
+
+In the `public` directory of your rails application, you will find the partial called '_auth.html.erb'. Copy and paste this partial and put it into your authentication controller, then you can render this partial whenever you want in your application, something like this:
+
+    <%= render "athentications/auth" %>
+
+If you want to add new social networks, you have to modify this file adding the new links.
+
+With this simple steps, you now have a basic configuration of your omniauth authentication against social networks. 
 
 ## Contributing
 
